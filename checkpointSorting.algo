@@ -1,0 +1,16 @@
+PROCEDURE insertionSort(arr: ARRAY_OF INTEGER[], VAR card : INTEGER)
+VAR
+        arr :ARRAY_OF INTEGER[];
+        i, j, card : INTEGER ;
+BEGIN
+    FOR i FROM 1 TO arr.length STEP 1  DO
+        card = arr[i];
+        j = i-1;
+            WHILE (j > 0 And arr[j] > card ) DO
+            arr[j+1] = arr[j];
+            j = j - 1 ;
+            END_WHILE
+        arr[j+1] = card; 
+    END_FOR
+END
+
